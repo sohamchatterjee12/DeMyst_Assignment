@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  react_app:
+    build:
+      context: ./loan-app
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+  backend_service:
+    build: ./backend
+    ports:
+      - "5000:5000"
+  xero_service:
+    build: ./xero_accounting_software
+    ports:
+    - "5002:5002"
+  myob_service:
+    build: ./myob_accounting_software
+    ports:
+    - "5001:5001"
+  decision_engine_service:
+    build: ./decision_engine
+    ports:
+    - "5003:5003"

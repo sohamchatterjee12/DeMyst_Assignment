@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /decision_engine
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+COPY . .
+CMD [ "python3", "-m" , "decision_engine", "flask", "run"]
