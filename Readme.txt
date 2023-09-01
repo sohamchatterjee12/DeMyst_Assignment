@@ -8,6 +8,6 @@ Steps to run the application:-
 
 4) Give the command "docker-compose up" . This executes the yaml file to start up all the containers and get the application running.
 
-5) Visit localhost:300 on your browser to use the app.
+5) Visit localhost:3000 on your browser to use the app.
 
 Note. We have 4 flask-based services and 1 react app each running on their separate containers and communicating with each other.
